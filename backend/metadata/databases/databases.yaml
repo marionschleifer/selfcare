@@ -1,0 +1,10 @@
+- name: db
+  kind: postgres
+  configuration:
+    connection_info:
+      database_url: postgres://ppapafjslxiefl:f4d3ac69ed548a0d767671869f9aad8963c586ebecd57894cf3f38c452c9b55f@ec2-34-230-167-186.compute-1.amazonaws.com:5432/d1649vb0143iu3
+      isolation_level: read-committed
+      pool_settings:
+        connection_lifetime: 600
+      use_prepared_statements: false
+  tables: "!include db/tables/tables.yaml"
